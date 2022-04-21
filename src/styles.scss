@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+$primary: #E9A94E;
+$dark: #100D26;
+$grey700: #83828C;
+$grey500: #C7C5D8;
+$white: #FFFFFF;
+
+html{
+  font-size: 18px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-family: 'Courgette', cursive;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  background: $dark;
+  color: $white;
+  font-weight: 500;
+}
+
+
+.primary-button{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: $white;
+  background: $primary;
+  padding: .5rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.white-glow-small{
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+.white-glow-normal{
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+.white-glow-container{
+  box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.35);
+}
