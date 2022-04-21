@@ -1,3 +1,9 @@
+$primary: #E9A94E;
+$dark: #100D26;
+$grey700: #83828C;
+$grey500: #C7C5D8;
+$white: #FFFFFF;
+
 .container{
   width: 90%;
   max-width: 1200px;
@@ -84,5 +90,124 @@
         width: 45%;
       }
     }
+  }
+}
+
+.skills-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  text-align: center;
+
+  .skill-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .skill-card{
+      justify-content: center;
+      box-shadow: 0px 0px 30px rgb(255 255 255 / 43%);
+      max-width: 300px;
+      padding: 0 2rem;
+      height: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      border-radius: 1rem;
+      background: $dark;
+
+      img{
+        width: 4rem;
+      }
+    }
+  }
+
+  @media screen and(min-width: 800px){
+    .skill-cards{
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+  @media screen and(min-width: 1000px){
+    .skill-cards{
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+}
+
+.work-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  text-align: center;
+
+  .work-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .work-card{
+      border-radius: 1rem;
+      box-shadow: 0px 0px 30px rgb(255 255 255 / 43%);
+      position: relative;
+      width: 300px;
+      height: 20rem;
+      background-size: cover!important;
+      background-position: center!important;
+      background-repeat: no-repeat!important;
+
+      h3{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 1rem;
+        background: rgba(0,0,0,0.75);
+      }
+    }
+
+    .work-card:nth-child(1){
+      background: url("../../../assets/images/app1.png");
+    }
+    .work-card:nth-child(2){
+      background: url("../../../assets/images/app2.png");
+    }
+    .work-card:nth-child(3){
+      background: url("../../../assets/images/app3.png");
+    }
+  }
+
+  @media screen and(min-width: 800px){
+    .work-cards{
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+  @media screen and(min-width: 1000px){
+    .work-cards{
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+}
+
+.contact-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+
+  .primary-button{
+    border-radius: 2rem;
   }
 }
