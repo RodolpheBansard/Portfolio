@@ -2,21 +2,21 @@
   <h2 class="white-glow-small">
     Hi, let's talk about <br> your <span>Project!</span>
   </h2>
-  <form>
+  <form [formGroup]="contactForm">
     <div class="form-group">
-      <label>Name</label>
-      <input placeholder="What's Your Name?">
+      <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.name) ? 'visible' : 'hidden'}" >Name</label>
+      <input formControlName="name" placeholder="What's Your Name?">
     </div>
     <div class="form-group">
-      <label>Email</label>
-      <input placeholder="What's Your Email?">
+      <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.email) ? 'visible' : 'hidden'}">Email</label>
+      <input formControlName="email" placeholder="What's Your Email?">
     </div>
     <div class="form-group">
-      <label>Message</label>
-      <input placeholder="Write your message">
+      <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.message) ? 'visible' : 'hidden'}">Message</label>
+      <input type="email" formControlName="message" placeholder="Write your message">
     </div>
 
-    <button class="primary-button">
+    <button [ngClass]="{'disable' : contactForm.invalid}" [disabled]="contactForm.invalid" (click)="submitContactForm()" class="primary-button">
       <span>Send Message</span>
       <img src="assets/images/right-arrow.svg">
     </button>

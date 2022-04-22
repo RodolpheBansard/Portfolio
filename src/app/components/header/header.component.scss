@@ -32,6 +32,7 @@ span,img{
 
 
 .overlay-header{
+  z-index: 10;
   left: -100%;
   padding-top: 5rem;
   gap: 2rem;
@@ -59,9 +60,14 @@ span,img{
 .overlay-header.active{
   left: 0;
 }
+@media screen and(min-width: 800px) {
+  .overlay-header{
+    display: none;
+  }
+}
 
 .hamburger-menu{
-  z-index: 1000;
+  z-index: 100;
   position: relative;
   display: flex;
   align-items: center;

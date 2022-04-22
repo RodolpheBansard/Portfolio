@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {AngularTiltModule} from "angular-tilt";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {AngularTiltModule} from "angular-tilt";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularTiltModule
+    AngularTiltModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

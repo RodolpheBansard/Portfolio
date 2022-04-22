@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -30,7 +31,12 @@ export class HomeComponent implements OnInit {
     gyroscopeMaxAngleY:     45,     // This is the top limit of the device angle on Y axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the bottom border of the element;
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goToContact(){
+    this.router.navigateByUrl('contact');
+  }
+
 
   ngOnInit(): void {
   }

@@ -1,5 +1,5 @@
 <div class="header-container">
-  <h1 class="white-glow-small">RB</h1>
+  <h1 (click)="goToHome()" class="white-glow-small">RB</h1>
   <div>
   <div>
     <div (click)="toggleOverlay()" [ngClass]="{'active' : isOverlayActive}" class="hamburger-menu">
@@ -11,7 +11,7 @@
       <span class="white-glow-small">About</span>
       <span class="white-glow-small">Skills</span>
       <span class="white-glow-small">Work</span>
-      <button class="primary-button">Let's Talk</button>
+      <button (click)="goToContact()" class="primary-button">Let's Talk</button>
     </div>
 
   </div>
@@ -20,5 +20,5 @@
   <span>About</span>
   <span>Skills</span>
   <span>Work</span>
-  <button class="primary-button">Let's Talk</button>
+  <button (click)="goToContact()" class="primary-button">Let's Talk</button>
 </div>
