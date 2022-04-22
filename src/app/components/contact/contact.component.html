@@ -3,15 +3,15 @@
     Hi, let's talk about <br> your <span>Project!</span>
   </h2>
   <form [formGroup]="contactForm">
-    <div class="form-group">
+    <div [ngClass]="{'invalid' : !contactForm.get('name')?.valid && !isEmpty(contactForm.controls.name)}" class="form-group">
       <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.name) ? 'visible' : 'hidden'}" >Name</label>
       <input formControlName="name" placeholder="What's Your Name?">
     </div>
-    <div class="form-group">
+    <div [ngClass]="{'invalid' : !contactForm.get('email')?.valid && !isEmpty(contactForm.controls.email)}" class="form-group">
       <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.email) ? 'visible' : 'hidden'}">Email</label>
       <input formControlName="email" placeholder="What's Your Email?">
     </div>
-    <div class="form-group">
+    <div [ngClass]="{'invalid' : !contactForm.get('message')?.valid && !isEmpty(contactForm.controls.message)}" class="form-group">
       <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.message) ? 'visible' : 'hidden'}">Message</label>
       <input type="email" formControlName="message" placeholder="Write your message">
     </div>

@@ -61,6 +61,14 @@ $white: #FFFFFF;
         }
       }
     }
+    .form-group.invalid{
+      input{
+        border-bottom: 2px solid red;
+      }
+      label{
+        color: red
+      }
+    }
     button{
       display: flex;
       flex-direction: row;

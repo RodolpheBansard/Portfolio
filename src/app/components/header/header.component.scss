@@ -13,6 +13,10 @@ $white: #FFFFFF;
   flex-direction: row;
   justify-content: space-between;
 
+  .logo{
+    cursor: pointer;
+  }
+
   .header-actions{
     display: none;
     flex-direction: row;

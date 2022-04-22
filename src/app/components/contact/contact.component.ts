@@ -10,6 +10,7 @@ declare let Email: any;
 })
 export class ContactComponent implements OnInit {
 
+
   contactForm = new FormGroup({
     name: new FormControl('',[Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -24,18 +25,20 @@ export class ContactComponent implements OnInit {
   }
 
   submitContactForm(){
-    console.log(this.contactForm.value);
-    Email.send({
-      Host:'smtp.elasticemail.com',
-      Username:'rbansard.freelance@gmail.com',
-      Password:'5EA509F74F91D5A233156221E6858D41C04F',
-      To:'rbansard.freelance@gmail.com',
-      From:'bansardrodolphe@gmail.com',
-      Subject:'Contact Portfolio',
-      Body:this.getBody(),
-    }).then(
-        (message: any) => console.log(message)
-    );
+    // Email.send({
+    //   Host:'smtp.elasticemail.com',
+    //   Username:'rbansard.freelance@gmail.com',
+    //   Password:'5EA509F74F91D5A233156221E6858D41C04F',
+    //   To:'rbansard.freelance@gmail.com',
+    //   From:'bansardrodolphe@gmail.com',
+    //   Subject:'Contact Portfolio',
+    //   Body:this.getBody(),
+    // }).then(
+    //     (message: any) => console.log(message)
+    // );
+    this.contactForm.controls.name.setValue('');
+    this.contactForm.controls.email.setValue('');
+    this.contactForm.controls.message.setValue('');
   }
 
   getBody(){
