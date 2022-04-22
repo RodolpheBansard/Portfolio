@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import '../../../assets/smtp.js'
+declare let Email: any;
 
 @Component({
   selector: 'app-contact',
@@ -23,6 +25,23 @@ export class ContactComponent implements OnInit {
 
   submitContactForm(){
     console.log(this.contactForm.value);
+    Email.send({
+      Host:'smtp.elasticemail.com',
+      Username:'rbansard.freelance@gmail.com',
+      Password:'5EA509F74F91D5A233156221E6858D41C04F',
+      To:'rbansard.freelance@gmail.com',
+      From:'bansardrodolphe@gmail.com',
+      Subject:'Contact Portfolio',
+      Body:this.getBody(),
+    }).then(
+        (message: any) => console.log(message)
+    );
+  }
+
+  getBody(){
+    return '<h1>'+ this.contactForm.controls.name.value +'</h1>' +
+      '<p>'+ this.contactForm.controls.email.value +'</p>' +
+      '<p>'+ this.contactForm.controls.message.value +'</p>';
   }
 
   isEmpty(formControl: any){
@@ -31,4 +50,5 @@ export class ContactComponent implements OnInit {
     }
     return true
   }
+
 }
