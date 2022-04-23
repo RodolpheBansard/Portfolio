@@ -139,61 +139,93 @@ $white: #FFFFFF;
 }
 
 .work-content{
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
   align-items: center;
-  gap: 5rem;
-  text-align: center;
 
   .work-cards{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
 
     .work-card{
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+
+      display: flex;
+      overflow: hidden;
       border-radius: 1rem;
       box-shadow: 0px 0px 30px rgb(255 255 255 / 43%);
-      position: relative;
-      width: 300px;
-      height: 20rem;
-      background-size: cover!important;
-      background-position: center!important;
-      background-repeat: no-repeat!important;
 
-      h3{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+
+      .work-image{
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .work-infos{
+        background: $dark;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem;
         text-align: center;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        padding: 1rem;
-        background: rgba(0,0,0,0.75);
+
+        .work-title{
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          h2{
+            font-size: 2rem;
+          }
+          span{
+            color: $grey500;
+          }
+        }
       }
     }
+    .work-card:nth-child(1) .work-image{
+      background-image: url('../../../assets/images/app4.png');
+    }
+    .work-card:nth-child(2) .work-image{
+      background-image: url('../../../assets/images/app1.png');
+    }
+    .work-card:nth-child(3) .work-image{
+      background-image: url('../../../assets/images/app2.png');
+    }
 
-    .work-card:nth-child(1){
-      background: url("../../../assets/images/app1.png");
-    }
-    .work-card:nth-child(2){
-      background: url("../../../assets/images/app2.png");
-    }
-    .work-card:nth-child(3){
-      background: url("../../../assets/images/app3.png");
-    }
-  }
+    @media screen and(min-width: 800px)  {
+      .work-card{
+        flex-direction: row;
+        width: 720px;
+        height: 350px;
 
-  @media screen and(min-width: 800px){
-    .work-cards{
-      flex-direction: row;
-      gap: 2rem;
-    }
-  }
-  @media screen and(min-width: 1000px){
-    .work-cards{
-      flex-direction: row;
-      gap: 5rem;
+        .work-infos{
+          width: 50%;
+          align-items: flex-start;
+          text-align: left;
+          padding: 3rem;
+          gap: 0;
+        }
+        .work-image{
+          width: 50%;
+          height: 100%;
+        }
+      }
+
+
+      .work-card:nth-child(2n){
+        flex-direction: row-reverse;
+      }
     }
   }
 }
