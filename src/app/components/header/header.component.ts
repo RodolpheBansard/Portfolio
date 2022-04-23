@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
-  isOverlayActive = false;
+  isOverlayActive = true;
 
   constructor(private router: Router) { }
 

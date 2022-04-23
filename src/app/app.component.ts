@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ParticlesConfig} from "./particles-config";
 import {TranslateService} from "@ngx-translate/core";
 declare let particlesJS: any;
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
     translate.setDefaultLang('en');
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('fr');
+    translate.use('en');
   }
 
   public invokeParticles(): void {

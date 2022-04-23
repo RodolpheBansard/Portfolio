@@ -1,0 +1,12 @@
+<div [ngClass]="{'active':isLanguagePickerActive,'overlay':isOverlay}" class="language-picker">
+  <div (click)="toggleLanguagePicker()" class="select-input">
+    <img class="selected-language-flag" [src]="selectedLanguage.flagPath">
+    <span class="selected-language">{{selectedLanguage.name}}</span>
+    <img class="arrow-down-image" src="assets/images/arrow-down.svg">
+  </div>
+
+
+  <div class="language-options">
+    <span [ngClass]="{'active' : language === selectedLanguage}" (click)="selectLanguage(language)" *ngFor="let language of languages">{{language.name}}</span>
+  </div>
+</div>

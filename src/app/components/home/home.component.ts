@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 export class HomeComponent implements OnInit {
 
   tiltSettings = {
-    reverse:                false,  // reverse the tilt direction
+    reverse:                true,  // reverse the tilt direction
     max:                    20,     // max tilt rotation (degrees)
     startX:                 0,      // the starting tilt on the X axis, in degrees.
     startY:                 0,      // the starting tilt on the Y axis, in degrees.
