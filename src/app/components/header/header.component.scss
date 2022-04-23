@@ -36,6 +36,7 @@ span,img{
 
 
 .overlay-header{
+  overflow: hidden;
   z-index: 10;
   left: -100%;
   padding-top: 5rem;
@@ -53,7 +54,7 @@ span,img{
   transition: .3s;
 
   span{
-    color: $dark;
+    color: $white;
   }
   button{
     border: 3px solid $white;

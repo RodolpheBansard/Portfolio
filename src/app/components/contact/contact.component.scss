@@ -4,12 +4,23 @@ $grey700: #83828C;
 $grey500: #C7C5D8;
 $white: #FFFFFF;
 
+.container{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  z-index: -1;
+}
+
 .contact-container{
   display: flex;
   flex-direction: column;
   width: 90%;
   max-width: 1200px;
-  margin: 10rem auto;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   gap: 3rem;

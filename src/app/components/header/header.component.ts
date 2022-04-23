@@ -21,9 +21,21 @@ export class HeaderComponent implements OnInit {
 
   goToContact(){
     this.router.navigateByUrl('contact');
+    this.isOverlayActive=false;
   }
 
   goToHome(){
     this.router.navigateByUrl('');
+    this.isOverlayActive=false;
+  }
+
+  scrollTo(element : string){
+    if(document.querySelector(element)){
+      this.isOverlayActive=false;
+
+      // @ts-ignore
+      document.querySelector(element).scrollIntoView({behavior: 'smooth'})
+    }
+
   }
 }

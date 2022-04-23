@@ -7,9 +7,9 @@
       <span></span>
     </div>
     <div class="header-actions">
-      <span class="white-glow-small">About</span>
-      <span class="white-glow-small">Skills</span>
-      <span class="white-glow-small">Work</span>
+      <span (click)="scrollTo('.about-content')" class="white-glow-small">About</span>
+      <span (click)="scrollTo('.skills-content')" class="white-glow-small">Skills</span>
+      <span (click)="scrollTo('.work-content')" class="white-glow-small">Work</span>
       <app-language-picker></app-language-picker>
       <button (click)="goToContact()" class="primary-button">Let's Talk</button>
     </div>
@@ -17,9 +17,9 @@
   </div>
 </div>
 <div [ngClass]="{'active' : isOverlayActive}" class="overlay-header">
-  <span>About</span>
-  <span>Skills</span>
-  <span>Work</span>
+  <span (click)="scrollTo('.about-content')">About</span>
+  <span (click)="scrollTo('.skills-content')">Skills</span>
+  <span (click)="scrollTo('.work-content')">Work</span>
   <app-language-picker [isOverlay]="true"></app-language-picker>
   <button (click)="goToContact()" class="primary-button">Let's Talk</button>
 </div>
