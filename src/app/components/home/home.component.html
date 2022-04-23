@@ -1,93 +1,88 @@
-<div class="container">
+<div class="hero-content-container">
   <div class="hero-content">
     <h1 aTilt [tiltSettings]="tiltSettings" class="white-glow-normal">RODOLPHE BANSARD</h1>
     <h2 class="white-glow-small">FULLSTACK-DEVELOPER  &  DESIGNER</h2>
     <div class="separator"></div>
     <p class="white-glow-small">Nantes, France</p>
   </div>
-
-  <div class="about-content">
-    <h3 class="white-glow-normal">About Me</h3>
-    <div class="about-description">
-      <img aTilt [tiltSettings]="tiltSettings" class="white-glow-container" src="assets/images/profil.jpg">
-      <div class="description">
-        <p class="white-glow-small">Hello There, I’m Rodolphe. For the past 2 years, web developpement has been a big part of my life. After graduating at ENSIM I’m a now au Fullstack Developer at Sodius-Willert and an aspiring freelancer on my FreeTime.</p>
-        <p class="white-glow-small">My goal is to create engaging applications with high standards on user-experience and user interface.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="skills-content">
-    <h3 class="white-glow-normal">What I Do</h3>
-    <div class="skill-cards">
-      <div aTilt [tiltSettings]="tiltSettings" class="skill-card">
-        <h3 class="white-glow-small">Front End Developement</h3>
-        <h4 class="white-glow-small">Robust reactive application in angular</h4>
-        <img src="assets/images/angular.svg">
-      </div>
-      <div aTilt [tiltSettings]="tiltSettings" class="skill-card">
-        <h3 class="white-glow-small">Back End Developement</h3>
-        <h4 class="white-glow-small">Rest services with spring boot</h4>
-        <img src="assets/images/spring.svg">
-      </div>
-      <div aTilt [tiltSettings]="tiltSettings" class="skill-card">
-        <h3 class="white-glow-small">UI/UI Design</h3>
-        <h4 class="white-glow-small">Interactive mockup in Figma</h4>
-        <img src="assets/images/figma.svg">
-      </div>
-    </div>
-  </div>
-
-  <div class="work-content">
-    <h3 class="white-glow-normal">Latest Work</h3>
-
-    <div class="work-cards">
-      <div aTilt [tiltSettings]="tiltSettings" class="work-card">
-        <div class="work-image"></div>
-        <div class="work-infos">
-          <div class="work-title">
-            <h2 class="white-glow-small">Grocery management app</h2>
-            <span class="white-glow-small">Angular, Firebase</span>
-          </div>
-          <button class="primary-button">View Project</button>
-        </div>
-      </div>
-
-      <div aTilt [tiltSettings]="tiltSettings" class="work-card">
-        <div class="work-image"></div>
-        <div class="work-infos">
-          <div class="work-title">
-            <h2 class="white-glow-small">Stephy Portfolio</h2>
-            <span class="white-glow-small">Figma, Angular, Firebase</span>
-          </div>
-          <button class="primary-button">View Project</button>
-        </div>
-      </div>
-      <div aTilt [tiltSettings]="tiltSettings" class="work-card">
-        <div class="work-image"></div>
-        <div class="work-infos">
-          <div class="work-title">
-            <h2 class="white-glow-small">Headphone E-commerce</h2>
-            <span class="white-glow-small">Angular, nestJS, Heroku</span>
-          </div>
-          <button class="primary-button">View Project</button>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-  <div class="contact-content">
-    <h3 class="white-glow-normal">Interested in working with me?</h3>
-    <button (click)="goToContact()" class="primary-button">Let's Talk</button>
-  </div>
-
-
-
-
-
 </div>
+
+
+<div class="about-content container">
+  <h3 class="white-glow-normal">About Me</h3>
+  <div class="about-description">
+    <img aTilt [tiltSettings]="tiltSettings" class="white-glow-container" src="assets/images/profil.jpg">
+    <div class="description">
+      <p class="white-glow-small">Hello There, I’m Rodolphe. For the past 2 years, web developpement has been a big part of my life. After graduating at ENSIM I’m a now au Fullstack Developer at Sodius-Willert and an aspiring freelancer on my FreeTime.</p>
+      <p class="white-glow-small">My goal is to create engaging applications with high standards on user-experience and user interface.</p>
+    </div>
+  </div>
+</div>
+
+<div class="skills-content container">
+  <h3 class="white-glow-normal">What I Do</h3>
+  <div class="skill-cards">
+    <div aTilt [tiltSettings]="tiltSettings" class="skill-card">
+      <h3 class="white-glow-small">Front End Developement</h3>
+      <h4 class="white-glow-small">Robust reactive application in angular</h4>
+      <img src="assets/images/angular.svg">
+    </div>
+    <div aTilt [tiltSettings]="tiltSettings" class="skill-card">
+      <h3 class="white-glow-small">Back End Developement</h3>
+      <h4 class="white-glow-small">Rest services with spring boot</h4>
+      <img src="assets/images/spring.svg">
+    </div>
+    <div aTilt [tiltSettings]="tiltSettings" class="skill-card">
+      <h3 class="white-glow-small">UI/UI Design</h3>
+      <h4 class="white-glow-small">Interactive mockup in Figma</h4>
+      <img src="assets/images/figma.svg">
+    </div>
+  </div>
+</div>
+
+<div class=" container work-content ">
+  <h3 class="white-glow-normal">Latest Work</h3>
+
+  <div class="work-cards">
+    <div aTilt [tiltSettings]="tiltSettings" class="work-card">
+      <div class="work-image"></div>
+      <div class="work-infos">
+        <div class="work-title">
+          <h2 class="white-glow-small">Grocery management app</h2>
+          <span class="white-glow-small">Angular, Firebase</span>
+        </div>
+        <button class="primary-button">View Project</button>
+      </div>
+    </div>
+
+    <div aTilt [tiltSettings]="tiltSettings" class="work-card">
+      <div class="work-image"></div>
+      <div class="work-infos">
+        <div class="work-title">
+          <h2 class="white-glow-small">Stephy Portfolio</h2>
+          <span class="white-glow-small">Figma, Angular, Firebase</span>
+        </div>
+        <button class="primary-button">View Project</button>
+      </div>
+    </div>
+    <div aTilt [tiltSettings]="tiltSettings" class="work-card">
+      <div class="work-image"></div>
+      <div class="work-infos">
+        <div class="work-title">
+          <h2 class="white-glow-small">Headphone E-commerce</h2>
+          <span class="white-glow-small">Angular, nestJS, Heroku</span>
+        </div>
+        <button class="primary-button">View Project</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-content">
+  <h3 class="white-glow-normal">Interested in working with me?</h3>
+  <button (click)="goToContact()" class="primary-button">Let's Talk</button>
+</div>
+
 
 <div class="footer">
   <div class="icon-holder"><img src="assets/images/dribbble.svg"></div>

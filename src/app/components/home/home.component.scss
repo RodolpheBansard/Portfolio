@@ -7,20 +7,36 @@ $white: #FFFFFF;
 .container{
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10rem;
 }
-
+.hero-content-container{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 10px solid $primary;
+}
 .hero-content{
-  margin-top: 15rem;
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+
 
   .separator{
     height: 6px;
@@ -38,7 +54,7 @@ $white: #FFFFFF;
   }
   @media screen and(min-width: 1050px){
     h1{
-      font-size: 5.5rem;
+      font-size: 6rem;
     }
     h2{
       font-size: 2rem;
@@ -52,6 +68,8 @@ $white: #FFFFFF;
 }
 
 .about-content{
+  margin-top: 100vh;
+  margin-bottom: 15rem;
   gap: 5rem;
   display: flex;
   flex-direction: column;
@@ -94,6 +112,7 @@ $white: #FFFFFF;
 }
 
 .skills-content{
+  margin-bottom: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,7 +158,7 @@ $white: #FFFFFF;
 }
 
 .work-content{
-  width: 100%;
+  margin-bottom: 15rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
