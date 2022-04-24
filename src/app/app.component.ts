@@ -1,6 +1,8 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {ParticlesConfig} from "./particles-config";
 import {TranslateService} from "@ngx-translate/core";
+import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
+import {filter} from "rxjs/operators";
 declare let particlesJS: any;
 
 @Component({
@@ -32,7 +34,8 @@ export class AppComponent implements OnInit{
   public ngOnInit(): void {
     this.invokeParticles();
   }
-  constructor(translate: TranslateService) {
+  constructor(translate: TranslateService,
+              private router: Router) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
 
@@ -44,6 +47,11 @@ export class AppComponent implements OnInit{
       this.yp += ((this.mouseY - this.yp)/10);
       this.cursor.nativeElement.setAttribute('style', 'left: '+this.xp +'px; top: '+ this.yp+'px');
     }, 10);
+
+    this.router.events.pipe(filter(e => e instanceof  NavigationEnd)).subscribe((e) => {
+      this.xp = 0;
+      this.yp = 0;
+    })
   }
 
   public invokeParticles(): void {
