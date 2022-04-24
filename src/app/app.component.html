@@ -1,6 +1,9 @@
+<button (click)="transition()">transition</button>
 <div id="particles-js"></div>
 <app-header></app-header>
 
 <router-outlet></router-outlet>
 
 <span #circle id="circle" class="circle"></span>
+<div [ngClass]="{'active': isTransition}" class="loader"></div>
+

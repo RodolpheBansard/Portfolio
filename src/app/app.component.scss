@@ -23,3 +23,27 @@ $white: #FFFFFF;
   pointer-events: none;
 
 }
+
+
+.loader{
+  top: 0;
+  left: 0;
+  //width: 100vw;
+  position: fixed;
+  height: 100vh;
+  background: $primary;
+  z-index: 1000;
+}
+
+.loader.active{
+  animation-duration: 1s;
+  animation-name: routeTransition;
+}
+
+@keyframes routeTransition {
+  0% { width: 0px;  }
+  50% {width: 100vw;left: 0}
+  51% {left: revert; right: 0}
+  100% {width: 0;left: revert; right: 0}
+}
+

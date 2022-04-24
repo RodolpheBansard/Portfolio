@@ -12,6 +12,8 @@ declare let particlesJS: any;
 })
 export class AppComponent implements OnInit{
 
+  isTransition = false;
+
   @HostListener('document:mousemove', ['$event']) onMouseMove(event: any) {
     this.mouseX = event.clientX -25;
     this.clientY = event.clientY;
@@ -56,5 +58,12 @@ export class AppComponent implements OnInit{
 
   public invokeParticles(): void {
     particlesJS('particles-js', ParticlesConfig, function() {});
+  }
+
+  transition(){
+    this.isTransition = true;
+    setTimeout(()=> {
+      this.isTransition = false
+    },1000);
   }
 }
