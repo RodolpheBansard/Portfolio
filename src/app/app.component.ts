@@ -3,6 +3,7 @@ import {ParticlesConfig} from "./particles-config";
 import {TranslateService} from "@ngx-translate/core";
 import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {filter} from "rxjs/operators";
+import {RouteService} from "./services/route.service";
 declare let particlesJS: any;
 
 @Component({
@@ -12,7 +13,7 @@ declare let particlesJS: any;
 })
 export class AppComponent implements OnInit{
 
-  isTransition = false;
+  isTransition$ = this.routeService.isTransitioning;
 
   @HostListener('document:mousemove', ['$event']) onMouseMove(event: any) {
     this.mouseX = event.clientX -25;
@@ -36,12 +37,10 @@ export class AppComponent implements OnInit{
   public ngOnInit(): void {
     this.invokeParticles();
   }
-  constructor(translate: TranslateService,
-              private router: Router) {
-    // this language will be used as a fallback when a translation isn't found in the current language
+  constructor(private translate: TranslateService,
+              private router: Router,
+              private routeService: RouteService) {
     translate.setDefaultLang('en');
-
-    // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
 
     setInterval(() =>{
@@ -60,10 +59,5 @@ export class AppComponent implements OnInit{
     particlesJS('particles-js', ParticlesConfig, function() {});
   }
 
-  transition(){
-    this.isTransition = true;
-    setTimeout(()=> {
-      this.isTransition = false
-    },1000);
-  }
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {TiltSettings1, TiltSettings2} from "./tiltSettings";
+import {RouteService} from "../../services/route.service";
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,10 @@ export class HomeComponent implements OnInit {
   tiltSettings1 = TiltSettings1;
   tiltSettings2 = TiltSettings2;
 
-  constructor(private router: Router) { }
+  constructor(private routeService: RouteService) { }
 
   goToContact(){
-    this.router.navigateByUrl('contact');
+    this.routeService.goToContact();
   }
 
 

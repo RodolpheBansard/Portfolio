@@ -18,7 +18,6 @@ export class ContactComponent implements OnInit {
   })
 
   constructor() {
-    console.log(this.contactForm)
   }
 
   ngOnInit(): void {

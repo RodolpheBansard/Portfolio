@@ -291,3 +291,11 @@ $white: #FFFFFF;
 
   }
 }
+
+.section-title{
+  position: relative;
+  font-size: 2rem;
+  border-bottom: 5px solid $primary;
+  padding-bottom: .5rem;
+}
+

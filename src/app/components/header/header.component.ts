@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {RouteService} from "../../services/route.service";
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,8 @@ export class HeaderComponent implements OnInit {
 
   isOverlayActive = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private routeService: RouteService) { }
 
   ngOnInit(): void {
   }
@@ -20,19 +22,18 @@ export class HeaderComponent implements OnInit {
   }
 
   goToContact(){
-    this.router.navigateByUrl('contact');
+    this.routeService.goToContact();
     this.isOverlayActive=false;
   }
 
   goToHome(){
-    this.router.navigateByUrl('');
+    this.routeService.goToHome();
     this.isOverlayActive=false;
   }
 
   scrollTo(element : string){
     if(document.querySelector(element)){
       this.isOverlayActive=false;
-
       // @ts-ignore
       document.querySelector(element).scrollIntoView({behavior: 'smooth'})
     }
