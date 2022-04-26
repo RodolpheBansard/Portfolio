@@ -16,6 +16,12 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { LanguagePickerComponent } from './components/header/language-picker/language-picker.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { AboutComponent } from './components/about/about.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AboutMeComponent } from './components/about/about-me/about-me.component';
+import { WhatIDoComponent } from './components/about/what-i-do/what-i-do.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,7 +36,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     FooterComponent,
     LanguagePickerComponent,
-    AboutComponent
+    AboutComponent,
+    AboutMeComponent,
+    WhatIDoComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -46,7 +54,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]

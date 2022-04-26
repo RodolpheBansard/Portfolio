@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  workExperiences : string[] = ['SODIUS', 'LUMIPLAN', 'THALES'];
+  educations: string[] = ['ENSIM1',"ENSIM2"];
+
   constructor() { }
 
   ngOnInit(): void {

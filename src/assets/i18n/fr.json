@@ -1,3 +1,22 @@
 {
-  "HELLO": "Bonjour monde"
+  "WORK_EXPERIENCE": {
+    "SODIUS": {
+      "DATE": "Depuis 2022",
+      "TITLE": "Sodius-Willert - Développeur FullStack Angular/Java",
+      "LOCATION": "Nantes",
+      "DESCRIPTION": "Depuis Décembre 2021, j’ai rejoint Sodius-Willert pour travailler sur un logiciel collaboratif versionné pour le compte de la DGA (direction générale des armées)"
+    },
+    "LUMIPLAN": {
+      "DATE": "2020-2021",
+      "TITLE": "Lumiplan - Développeur FullStack Angular/Java",
+      "LOCATION": "Nantes",
+      "DESCRIPTION": "Durant l’année 2021, j’ai participé à la mise en place d’une solution SaaS pour piloter l’affichage d’informations dans le domaine du transport, de la ville et de la montagne"
+    },
+    "THALES": {
+      "DATE": "2020",
+      "TITLE": "Thales AVS - Développeur C#",
+      "LOCATION": "Toulouse",
+      "DESCRIPTION": "J’ai effectué mon stage de fin d’étude chez Thales Avionics pour réaliser un prototype de génération de terrain pour offrir un nombre illimité de scénarios de vol pour des simulateurs"
+    }
+  }
 }

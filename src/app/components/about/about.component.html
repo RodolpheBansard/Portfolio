@@ -1,1 +1,29 @@
-<p>about works!</p>
+
+<div class="about-container">
+  <app-about-me></app-about-me>
+  <app-what-i-do></app-what-i-do>
+</div>
+
+<div class="resume-content container">
+  <h3 class="white-glow-normal section-title">About Me</h3>
+  <div>
+    <img src="">
+    <h4>Work Experience</h4>
+  </div>
+
+  <div class="resume-group">
+    <div *ngFor="let workExperience of workExperiences" class="resume-item">
+      <span class="resume-item-date">{{'WORK_EXPERIENCE.' + workExperience + '.DATE' | translate}}</span>
+      <div>
+        <span class="resume-item-title">{{'WORK_EXPERIENCE.' + workExperience + '.TITLE' | translate}}</span>
+        <span class="resume-item-location">{{'WORK_EXPERIENCE.' + workExperience + '.LOCATION' | translate}}</span>
+        <span class="resume-item-description">{{'WORK_EXPERIENCE.' + workExperience + '.DESCRIPTION' | translate}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <img src="">
+    <h4>Education</h4>
+  </div>
+</div>
