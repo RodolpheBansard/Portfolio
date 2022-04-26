@@ -5,6 +5,7 @@ $grey500: #C7C5D8;
 $white: #FFFFFF;
 
 .header-container{
+  position: relative;
   padding-top: 3rem;
   margin: 0 auto;
   width: 90%;
@@ -14,6 +15,7 @@ $white: #FFFFFF;
   justify-content: space-between;
 
   .logo{
+    z-index: 10;
     cursor: pointer;
   }
 
@@ -22,6 +24,10 @@ $white: #FFFFFF;
     flex-direction: row;
     gap: 3rem;
     align-items: center;
+
+    span{
+      z-index: 10;
+    }
   }
   @media screen and(min-width: 850px) {
     .header-actions{

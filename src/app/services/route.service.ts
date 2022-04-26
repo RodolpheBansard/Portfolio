@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {BehaviorSubject} from "rxjs";
 
 @Injectable({
@@ -9,14 +9,20 @@ export class RouteService {
 
   isTransitioning : BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private activatedRoute: ActivatedRoute) { }
 
   goToContact(){
-    this.transition('contact');
+    if(!document.location.href.includes('contact')){
+      this.transition('contact');
+    }
+
   }
 
   goToHome(){
-    this.transition('');
+    if(!document.location.href.includes('home')){
+      this.transition('home');
+    }
   }
 
 

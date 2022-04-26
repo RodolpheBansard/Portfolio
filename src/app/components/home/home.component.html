@@ -1,9 +1,9 @@
 <div class="hero-content-container">
   <div class="hero-content">
-    <h1 aTilt [tiltSettings]="tiltSettings1" class="white-glow-normal">RODOLPHE BANSARD</h1>
-    <h2 class="white-glow-small">FULLSTACK-DEVELOPER  &  DESIGNER</h2>
-    <div class="separator"></div>
-    <p class="white-glow-small">Nantes, France</p>
+    <span class="text-container"><h1 [@text-pop]="isVisible ? 'visible' : 'hidden'" aTilt [tiltSettings]="tiltSettings2" class="popping-text white-glow-normal">RODOLPHE BANSARD</h1></span>
+    <span class="text-container"><h2 [@text-pop]="isVisible ? 'visible' : 'hidden'" class="popping-text white-glow-small">FULLSTACK-DEVELOPER  &  DESIGNER</h2></span>
+    <div [@separator-pop]="isVisible ? 'visible' : 'hidden'" class="separator"></div>
+    <span class="text-container"><p [@text-pop]="isVisible ? 'visible' : 'hidden'" class="popping-text white-glow-small">Nantes, France</p></span>
   </div>
 </div>
 

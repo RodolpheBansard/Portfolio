@@ -4,6 +4,10 @@ $grey700: #83828C;
 $grey500: #C7C5D8;
 $white: #FFFFFF;
 
+.popping-text{
+  position: relative;
+}
+
 .container{
   width: 90%;
   max-width: 1200px;
@@ -15,7 +19,6 @@ $white: #FFFFFF;
   justify-content: center;
 }
 .hero-content-container{
-  z-index: -1;
   position: absolute;
   top: 0;
   height: 100vh;
@@ -24,6 +27,11 @@ $white: #FFFFFF;
   align-items: center;
   justify-content: center;
   //border-bottom: 10px solid $primary;
+
+  .text-container{
+    padding: 0 1rem;
+    overflow: hidden;
+  }
 }
 .hero-content{
   width: 90%;
@@ -295,7 +303,7 @@ $white: #FFFFFF;
 .section-title{
   position: relative;
   font-size: 2rem;
-  border-bottom: 5px solid $primary;
+  border-bottom: 3px solid $primary;
   padding-bottom: .5rem;
 }
 
