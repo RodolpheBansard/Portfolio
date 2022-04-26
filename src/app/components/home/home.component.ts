@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
 import {TiltSettings1, TiltSettings2} from "./tiltSettings";
 import {RouteService} from "../../services/route.service";
-import {animate, state, style, transition, trigger} from "@angular/animations";
 import {PoppingSeparator, PoppingText} from "../../animations/home.anim";
 
 @Component({
@@ -30,7 +28,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=> {
       this.isVisible = true;
-    },200)
+    },1)
   }
 
 }

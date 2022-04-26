@@ -1,4 +1,4 @@
-export const TiltSettings1 = {
+export var TiltSettings1 = {
   reverse:                true,  // reverse the tilt direction
   max:                    20,     // max tilt rotation (degrees)
   startX:                 0,      // the starting tilt on the X axis, in degrees.

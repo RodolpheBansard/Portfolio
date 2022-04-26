@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { WorkComponent } from './components/work/work.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {AngularTiltModule} from "angular-tilt";
 import {ReactiveFormsModule} from "@angular/forms";
@@ -16,6 +15,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { LanguagePickerComponent } from './components/header/language-picker/language-picker.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { AboutComponent } from './components/about/about.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -28,9 +28,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     WorkComponent,
     ContactComponent,
-    SkillsComponent,
     FooterComponent,
-    LanguagePickerComponent
+    LanguagePickerComponent,
+    AboutComponent
   ],
   imports: [
     BrowserAnimationsModule,

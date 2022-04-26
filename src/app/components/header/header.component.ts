@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=> {
       this.isHeaderVisible = true;
-    },200)
+    },1)
   }
 
   toggleOverlay(){
@@ -31,15 +31,9 @@ export class HeaderComponent implements OnInit {
     this.isOverlayActive=false;
     this.router.navigateByUrl(url);
   }
-
-  goToContact(){
-    this.routeService.goToContact();
+  navigate(url: string){
     this.isOverlayActive=false;
-  }
-
-  goToHome(){
-    this.routeService.goToHome();
-    this.isOverlayActive=false;
+    this.routeService.transition(url);
   }
 
   scrollTo(element : string){
