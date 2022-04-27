@@ -2,21 +2,40 @@
   "WORK_EXPERIENCE": {
     "SODIUS": {
       "DATE": "Since 2022",
-      "TITLE": "Sodius-Willert - FullStack Developer Angular/Java",
+      "COMPANY": "Sodius-Willert",
+      "TITLE": "FullStack Developer Angular/Java",
       "LOCATION": "Nantes",
       "DESCRIPTION": "Since december of 2021, I joint Sodius-Willert to work on collaborative software for the 'DGA' (the army)"
     },
     "LUMIPLAN": {
       "DATE": "2020-2021",
-      "TITLE": "Lumiplan - FullStack Developer Angular/Java",
+      "COMPANY": "Lumiplan",
+      "TITLE": "FullStack Developer Angular/Java",
       "LOCATION": "Nantes",
       "DESCRIPTION": "During the year 2021, I participated in the implementation of a SaaS solution to manage the display of information in the field of transport, city and mountain"
     },
     "THALES": {
       "DATE": "2020",
-      "TITLE": "Thales AVS - Développeur C#",
+      "COMPANY": "Thales AVS",
+      "TITLE": "Développeur C#",
       "LOCATION": "Toulouse",
       "DESCRIPTION": "J’ai effectué mon stage de fin d’étude chez Thales Avionics pour réaliser un prototype de génération de terrain pour offrir un nombre illimité de scénarios de vol pour des simulateurs"
+    }
+  },
+  "EDUCATION": {
+    "ENSIM1": {
+      "DATE": "2020",
+      "SCHOOL": "ENSIM",
+      "TITLE": "Engineering degree in computer science",
+      "LOCATION": "Le Mans",
+      "DESCRIPTION": "major : Architecture of embedded systems"
+    },
+    "ENSIM2": {
+      "DATE": "2015-2017",
+      "SCHOOL": "ENSIM",
+      "TITLE": "preparatory class",
+      "LOCATION": "Le Mans",
+      "DESCRIPTION": "Physics degree"
     }
   }
 }

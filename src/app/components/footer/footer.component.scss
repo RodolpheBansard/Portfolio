@@ -4,8 +4,22 @@ $grey700: #83828C;
 $grey500: #C7C5D8;
 $white: #FFFFFF;
 
+.contact-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+
+  .primary-button{
+    border-radius: 2rem;
+  }
+}
+
 .footer{
-  padding: 5rem;
+  padding: 5rem 0;
   width: 90%;
   max-width: 1200px;
   display: flex;

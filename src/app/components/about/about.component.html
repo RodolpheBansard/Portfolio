@@ -4,26 +4,49 @@
   <app-what-i-do></app-what-i-do>
 </div>
 
-<div class="resume-content container">
-  <h3 class="white-glow-normal section-title">About Me</h3>
-  <div>
-    <img src="">
-    <h4>Work Experience</h4>
-  </div>
+<div class="container">
+  <h3 class="white-glow-normal section-title">My Resume</h3>
+  <div class="resume-content">
+    <div class="resume-title-section">
+      <img src="assets/images/work.svg">
+      <h4>Work Experience</h4>
+    </div>
 
-  <div class="resume-group">
-    <div *ngFor="let workExperience of workExperiences" class="resume-item">
-      <span class="resume-item-date">{{'WORK_EXPERIENCE.' + workExperience + '.DATE' | translate}}</span>
-      <div>
-        <span class="resume-item-title">{{'WORK_EXPERIENCE.' + workExperience + '.TITLE' | translate}}</span>
-        <span class="resume-item-location">{{'WORK_EXPERIENCE.' + workExperience + '.LOCATION' | translate}}</span>
-        <span class="resume-item-description">{{'WORK_EXPERIENCE.' + workExperience + '.DESCRIPTION' | translate}}</span>
+    <div class="resume-group">
+      <div *ngFor="let workExperience of workExperiences" class="resume-item">
+        <span class="resume-item-date">{{'WORK_EXPERIENCE.' + workExperience + '.DATE' | translate}}</span>
+        <div class="resume-item-infos">
+        <span class="resume-item-title">
+          <span class="resume-item-company">{{'WORK_EXPERIENCE.' + workExperience + '.COMPANY' | translate}}</span> -
+          {{'WORK_EXPERIENCE.' + workExperience + '.TITLE' | translate}}
+        </span>
+          <span class="resume-item-location">{{'WORK_EXPERIENCE.' + workExperience + '.LOCATION' | translate}}</span>
+          <span class="resume-item-description">{{'WORK_EXPERIENCE.' + workExperience + '.DESCRIPTION' | translate}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="resume-title-section">
+      <img src="assets/images/education.svg">
+      <h4>Education</h4>
+    </div>
+
+    <div class="resume-group">
+      <div *ngFor="let education of educations" class="resume-item">
+        <span class="resume-item-date">{{'EDUCATION.' + education + '.DATE' | translate}}</span>
+        <div class="resume-item-infos">
+        <span class="resume-item-title">
+          <span class="resume-item-school">{{'EDUCATION.' + education + '.SCHOOL' | translate}}</span> -
+          {{'EDUCATION.' + education + '.TITLE' | translate}}
+        </span>
+          <span class="resume-item-location">{{'EDUCATION.' + education + '.LOCATION' | translate}}</span>
+          <span class="resume-item-description">{{'EDUCATION.' + education + '.DESCRIPTION' | translate}}</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <div>
-    <img src="">
-    <h4>Education</h4>
-  </div>
+  <app-footer></app-footer>
 </div>
+
+

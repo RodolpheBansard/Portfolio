@@ -1,3 +1,85 @@
+$primary: #E9A94E;
+$dark: #100D26;
+$grey700: #83828C;
+$grey500: #C7C5D8;
+$white: #FFFFFF;
+
+.container{
+  gap: 5rem;
+}
+
 .about-container{
   margin-top: 10rem;
+}
+
+.resume-content{
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .resume-title-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 24px;
+    gap: 1rem;
+    color:$primary;
+  }
+}
+
+.resume-group{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  .resume-item{
+    gap: .5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .resume-item-date{
+      flex: 1;
+      color: $grey500;
+    }
+    .resume-item-infos{
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+
+      .resume-item-title{
+        font-size: 18px;
+        .resume-item-school,.resume-item-company{
+          font-weight: bold;
+        }
+      }
+
+      .resume-item-location{
+        color: $grey500;
+        margin-bottom: .5rem;
+      }
+    }
+
+  }
+}
+@media screen and(min-width: 600px) {
+
+  .resume-group{
+    font-size: 18px;
+
+    .resume-item{
+      flex-direction: row !important;
+      gap: 0;
+
+      .resume-item-title{
+        font-size: 24px!important;
+      }
+    }
+  }
+
 }
