@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/compat/firestore";
+import {Observable} from "rxjs";
+
+export interface Work{
+  title:string;
+  previewPath:string,
+  tags: string[];
+  illustrationsPath: string[];
+}
 
 @Component({
   selector: 'app-work',
@@ -7,7 +16,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkComponent implements OnInit {
 
-  constructor() { }
+  private workCollection: AngularFirestoreCollection<Work>;
+  works: Observable<Work[]>
+
+  constructor(private afs: AngularFirestore) {
+    this.workCollection = afs.collection<Work>('works');
+    this.works = this.workCollection.valueChanges();
+
+  }
 
   ngOnInit(): void {
   }
