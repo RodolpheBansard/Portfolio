@@ -37,5 +37,19 @@
       "LOCATION": "Le Mans",
       "DESCRIPTION": "Physics degree"
     }
+  },
+  "WORK": {
+    "LUMIPLAY": {
+      "TITLE": "Lumiplay",
+      "DESCRIPTION": ""
+    },
+    "SECOLLAB": {
+      "TITLE": "SECOLLAB",
+      "DESCRIPTION": ""
+    },
+    "PORTFOLIO": {
+      "TITLE": "Portfolio",
+      "DESCRIPTION": ""
+    }
   }
 }

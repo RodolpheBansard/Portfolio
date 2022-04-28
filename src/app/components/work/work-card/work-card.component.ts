@@ -11,6 +11,9 @@ export class WorkCardComponent implements OnInit {
   @Input()
   work!: Work;
 
+  @Input()
+  index!: number
+
   tiltSetting = TiltSettings2;
 
   constructor() { }

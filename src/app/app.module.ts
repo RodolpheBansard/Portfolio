@@ -9,7 +9,7 @@ import {WorkComponent} from './components/work/work.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {AngularTiltModule} from "angular-tilt";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
@@ -48,6 +48,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     AngularTiltModule,
     ReactiveFormsModule,
+    FormsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {

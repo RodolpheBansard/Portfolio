@@ -37,5 +37,19 @@
       "LOCATION": "Le Mans",
       "DESCRIPTION": "Obtention d’un DEUG de physique"
     }
+  },
+  "WORK": {
+    "LUMIPLAY": {
+      "TITLE": "Lumiplay",
+      "DESCRIPTION": ""
+    },
+    "SECOLLAB": {
+      "TITLE": "SECOLLAB",
+      "DESCRIPTION": ""
+    },
+    "PORTFOLIO": {
+      "TITLE": "Portfolio",
+      "DESCRIPTION": ""
+    }
   }
 }

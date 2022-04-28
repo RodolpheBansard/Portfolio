@@ -1,1 +1,24 @@
-<p *ngFor="let work of works | async">{{work.title}}</p>
+<div class=" container work-content ">
+  <h2 style="font-size: 3rem" class="white-glow-normal">My Work</h2>
+<!--  <div class="work-search">-->
+<!--    <div class="work-search-input-container">-->
+<!--      <img src="assets/images/search.svg">-->
+<!--      <input class="work-search-input" placeholder="filter...">-->
+<!--    </div>-->
+
+
+<!--    <div class="work-tags-container">-->
+<!--      <div *ngFor="let checkbox of checkboxes" class="work-tag-checkbox">-->
+<!--        <div [ngClass]="{'active':checkbox.isSelected}" (click)="onCheckbox(checkbox)" class="checkbox"></div>-->
+<!--        <span>{{checkbox.tagName}}</span>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+  <div class="work-cards">
+    <app-work-card *ngFor="let work of works$|async; let index = index" [work]="work"></app-work-card>
+  </div>
+</div>
+
+<app-footer></app-footer>
