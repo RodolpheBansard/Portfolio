@@ -17,8 +17,10 @@
 
 
   <div class="work-cards">
-    <app-work-card *ngFor="let work of works$|async; let index = index" [work]="work"></app-work-card>
+    <app-work-card *ngFor="let work of works$|async; let index = index" [work]="work" [index]="index"></app-work-card>
   </div>
 </div>
 
 <app-footer></app-footer>
+
+<app-work-details-modal *ngIf="selectedWork != null" [work]="selectedWork"></app-work-details-modal>

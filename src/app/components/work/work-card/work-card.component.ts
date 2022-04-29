@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {TiltSettings2} from "../../home/tiltSettings";
 import {Work} from "../work.component";
+import {WorkModalService} from "../../../services/work-modal.service";
 
 @Component({
   selector: 'app-work-card',
@@ -16,9 +17,13 @@ export class WorkCardComponent implements OnInit {
 
   tiltSetting = TiltSettings2;
 
-  constructor() { }
+  constructor( private workModalService:WorkModalService) { }
 
   ngOnInit(): void {
+  }
+
+  onClickWork(work:Work){
+    this.workModalService.updateSelectedWork(work);
   }
 
 }

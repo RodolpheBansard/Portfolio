@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/compat/firestore";
-import {Observable} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 import {filter, map} from "rxjs/operators";
 import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {WorkModalService} from "../../services/work-modal.service";
 
 export interface Work{
   title:string;
@@ -23,6 +24,8 @@ export interface WorkTag{
 })
 export class WorkComponent implements OnInit {
 
+  selectedWork!: Work;
+
   private workCollection: AngularFirestoreCollection<Work>;
   works$: Observable<Work[]>
 
@@ -30,7 +33,13 @@ export class WorkComponent implements OnInit {
   checkboxes: WorkTag[] = [];
 
   constructor(private afs: AngularFirestore,
-              private formBuilder: FormBuilder) {
+              private formBuilder: FormBuilder,
+              private workModalService: WorkModalService) {
+    this.workModalService.selectedWork.subscribe((value) => {
+      console.log(value);
+      this.selectedWork = value;
+    })
+
     //get data from firestore
     this.workCollection = afs.collection<Work>('works');
     this.works$ = this.workCollection.valueChanges();
@@ -58,6 +67,8 @@ export class WorkComponent implements OnInit {
   onCheckbox(workTag:WorkTag){
     workTag.isSelected = !workTag.isSelected
   }
+
+
 
 
 

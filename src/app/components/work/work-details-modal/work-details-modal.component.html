@@ -1,0 +1,23 @@
+<div class="modal-container">
+  <div class="modal">
+    <h1>Lumiplay</h1>
+    <div class="description">
+      <p>Lumiplay est une solution SaaS permettant de crée, gérer et planifier des contenus. Ces contenus sont ensuite envoyé sur leur support d’affichage (application mobile, panneau d’information, transport en commun, ...)</p>
+      <p>J’ai pu participer au développement de cette application pendant un an en utilisant Angular pour le frontend et Java (Springboot) pour le backend avec une base de données PostrgesSQL</p>
+    </div>
+    <div class="carousel">
+      <div class="carousel-arrows">
+        <div (click)="nextImage()"><img class="carousel-arrow left" src="assets/images/right-arrow.svg"></div>
+        <div (click)="previousImage()"><img class="carousel-arrow" src="assets/images/right-arrow.svg"></div>
+      </div>
+      <img [src]="imageUrl|async">
+    </div>
+
+    <div (click)="resetSelectedWork()" class="close-modal-icon">
+      <img src="assets/images/cross.svg">
+    </div>
+
+  </div>
+
+</div>
+<div class="overlay"></div>

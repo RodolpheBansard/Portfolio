@@ -1,10 +1,10 @@
-<div aTilt [tiltSettings]="tiltSetting" class="work-card">
-  <div [style.background-image]="'url(' + work.previewPath + ')'" class="work-image"></div>
+<div [ngClass]="{'reverse' : index%2==0}"  aTilt [tiltSettings]="tiltSetting" class="work-card">
+<!--  <div [style.background-image]="'url(' + work.previewPath + ')'" class="work-image"></div>-->
   <div class="work-infos">
     <div class="work-title">
       <h2 class="white-glow-small">{{("WORK." + work.title + ".TITLE")|translate}}</h2>
       <span *ngFor="let tag of work.tags" class="white-glow-small">{{tag}}</span>
     </div>
-    <button class="primary-button">View Project</button>
+    <button (click)="onClickWork(work)" class="primary-button">View Project</button>
   </div>
 </div>

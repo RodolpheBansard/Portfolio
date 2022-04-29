@@ -22,6 +22,8 @@ import {WhatIDoComponent} from './components/about/what-i-do/what-i-do.component
 import {AngularFireModule} from "@angular/fire/compat";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import { WorkCardComponent } from './components/work/work-card/work-card.component';
+import { WorkDetailsModalComponent } from './components/work/work-details-modal/work-details-modal.component';
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -40,12 +42,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutMeComponent,
     WhatIDoComponent,
     WorkCardComponent,
+    WorkDetailsModalComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    AngularFireStorageModule,
     AngularTiltModule,
     ReactiveFormsModule,
     FormsModule,
