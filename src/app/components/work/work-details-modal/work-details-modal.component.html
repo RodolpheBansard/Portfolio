@@ -10,7 +10,7 @@
         <div (click)="nextImage()"><img class="carousel-arrow left" src="assets/images/right-arrow.svg"></div>
         <div (click)="previousImage()"><img class="carousel-arrow" src="assets/images/right-arrow.svg"></div>
       </div>
-      <img [src]="imageUrl|async">
+      <img class="carousel-image" [src]="imageUrl[counter]">
     </div>
 
     <div (click)="resetSelectedWork()" class="close-modal-icon">
