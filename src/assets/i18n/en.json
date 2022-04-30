@@ -51,5 +51,50 @@
       "TITLE": "Portfolio",
       "DESCRIPTION": ""
     }
+  },
+  "NAV": {
+    "CONTACT": "Let's Talk",
+    "ABOUT": "About",
+    "WORK": "Work"
+  },
+  "SECTION_TITLE": {
+    "ABOUT": "About me",
+    "SKILLS": "What I Do",
+    "INTERESTED": "Interested in working with me?",
+    "RESUME": "My Resume"
+  },
+  "SKILLS": {
+    "FRONT": {
+      "LABEL": "Front End Developement",
+      "DESCRIPTION": "Robust reactive application in angular"
+    },
+    "BACK": {
+      "LABEL": "Front End Developement",
+      "DESCRIPTION": "Rest services with spring boot"
+    },
+    "DESIGN": {
+      "LABEL": "UX/UI Design",
+      "DESCRIPTION": "Interactive mockup in Figma"
+    }
+  },
+  "ABOUT": {
+    "DESCRIPTION1": "Hello There, I’m Rodolphe. For the past 2 years, web developpement has been a big part of my life. After graduating at ENSIM I’m a now au Fullstack Developer at Sodius-Willert and an aspiring freelancer on my FreeTime.",
+    "DESCRIPTION2": "My goal is to create engaging applications with high standards on user-experience and user interface."
+  },
+  "CONTACT": {
+    "TITLE": "Hi, let's talk about your",
+    "TITLE_HIGHLIGHT": "Project!",
+    "SUBMIT": "Send Message",
+    "LABEL": {
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "MESSAGE": "Message"
+    },
+    "PLACEHOLDER": {
+      "NAME": "What's Your Name",
+      "EMAIL": "What's Your Email",
+      "MESSAGE": "Write Your Message"
+    }
   }
+
 }

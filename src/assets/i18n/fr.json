@@ -51,5 +51,49 @@
       "TITLE": "Portfolio",
       "DESCRIPTION": ""
     }
+  },
+  "NAV": {
+    "CONTACT": "Contact",
+    "ABOUT": "A propos",
+    "WORK": "Portfolio"
+  },
+  "SECTION_TITLE": {
+    "ABOUT": "A Propos de moi",
+    "SKILLS": "Prestations",
+    "INTERESTED": "Vous êtes intéressés pour travailler avec moi?",
+    "RESUME": "Mon CV"
+  },
+  "SKILLS": {
+    "FRONT": {
+      "LABEL": "Developement Front End",
+      "DESCRIPTION": "Développement d'application réactive en angular"
+    },
+    "BACK": {
+      "LABEL": "Developement Back End",
+      "DESCRIPTION": "Services Rest avec spring boot"
+    },
+    "DESIGN": {
+      "LABEL": "UX/UI Design",
+      "DESCRIPTION": "Design Produit avec Figma"
+    }
+  },
+  "ABOUT": {
+    "DESCRIPTION1": "Hello there, je m'appelle Rodolphe. Au cours des dernières années, led développement web a été une partie importante de ma vie. Après mon diplôme d'ingénieur en informatique à l'ENSIM je suis maintenant un développeur Fullstack à Sodius-Willer et freelance sur mon temps libre.",
+    "DESCRIPTION2": "Mon but est de créer des applications attractives en étant exigeant sur l’expérience utilisateur et le design"
+  },
+  "CONTACT": {
+    "TITLE": "Parlons de votre",
+    "TITLE_HIGHLIGHT": "Projet!",
+    "SUBMIT": "Envoyer le message",
+    "LABEL": {
+      "NAME": "Nom",
+      "EMAIL": "Mail",
+      "MESSAGE": "Message"
+    },
+    "PLACEHOLDER": {
+      "NAME": "Nom...",
+      "EMAIL": "Email...",
+      "MESSAGE": "Message..."
+    }
   }
 }
