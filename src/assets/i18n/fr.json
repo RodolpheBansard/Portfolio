@@ -55,19 +55,19 @@
   "SKILLS": {
     "FRONT": {
       "LABEL": "Developement Front End",
-      "DESCRIPTION": "Développement d'application réactive en angular"
+      "DESCRIPTION": "Développement d'applications réactives en angular"
     },
     "BACK": {
       "LABEL": "Developement Back End",
-      "DESCRIPTION": "Services Rest avec spring boot"
+      "DESCRIPTION": "Services rest avec spring boot"
     },
     "DESIGN": {
       "LABEL": "UX/UI Design",
-      "DESCRIPTION": "Design Produit avec Figma"
+      "DESCRIPTION": "Design produit avec Figma"
     }
   },
   "ABOUT": {
-    "DESCRIPTION1": "Hello there, je m'appelle Rodolphe. Au cours des dernières années, led développement web a été une partie importante de ma vie. Après mon diplôme d'ingénieur en informatique à l'ENSIM je suis maintenant un développeur Fullstack à Sodius-Willer et freelance sur mon temps libre.",
+    "DESCRIPTION1": "Salut, je m'appelle Rodolphe. Au cours des dernières années, le développement web a été une partie importante de ma vie. Après mon diplôme d'ingénieur en informatique à l'ENSIM je suis maintenant un développeur Fullstack à Sodius-Willer et freelance sur mon temps libre.",
     "DESCRIPTION2": "Mon but est de créer des applications attractives en étant exigeant sur l’expérience utilisateur et le design"
   },
   "CONTACT": {
@@ -99,11 +99,11 @@
     "PERSONAL_PORTFOLIO": {
       "LABEL": "Portfolio",
       "DESCRIPTION1": "Ce portfolio a été développé dans le but de présenter mes compétences de développeur Fullstack dans le cadre de mon activité de freelance.",
-      "DESCRIPTION2": "La maquette a été réalisé sur figma et l'intégration a été faite en angular. Firebase est utilisé pour le stockage des image et pour le déploiement"
+      "DESCRIPTION2": "La maquette a été réalisée sur figma et l'intégration a été faite en angular. Firebase est utilisé pour le stockage des image et pour le déploiement"
     },
     "SECOLLAB": {
       "LABEL": "Secollab",
-      "DESCRIPTION1": "Secollab est une platforme web de revue de données et de modeèle dans un environnement versionné.",
+      "DESCRIPTION1": "Secollab est une platforme web de revue de données et de modèle dans un environnement versionné.",
       "DESCRIPTION2": "Je participe actuellement au developpement de cette platforme en utilisant Angular pour le frontend et Java pour le backend avec une base de données de type graphe(Neo4j)"
     }
   }
