@@ -10,6 +10,8 @@ declare let Email: any;
 })
 export class ContactComponent implements OnInit {
 
+  isNotifActive = false;
+  isNotifSuccess = true;
 
   contactForm = new FormGroup({
     name: new FormControl('',[Validators.required]),
@@ -24,17 +26,25 @@ export class ContactComponent implements OnInit {
   }
 
   submitContactForm(){
-    // Email.send({
-    //   Host:'smtp.elasticemail.com',
-    //   Username:'rbansard.freelance@gmail.com',
-    //   Password:'5EA509F74F91D5A233156221E6858D41C04F',
-    //   To:'rbansard.freelance@gmail.com',
-    //   From:'bansardrodolphe@gmail.com',
-    //   Subject:'Contact Portfolio',
-    //   Body:this.getBody(),
-    // }).then(
-    //     (message: any) => console.log(message)
-    // );
+    Email.send({
+      Host:'smtp.elasticemail.com',
+      Username:'rbansard.freelance@gmail.com',
+      Password:'5EA509F74F91D5A233156221E6858D41C04F',
+      To:'rbansard.freelance@gmail.com',
+      From:'bansardrodolphe@gmail.com',
+      Subject:'Contact Portfolio',
+      Body:this.getBody(),
+    }).then(
+        (message: any) => {
+          if(message === 'OK'){
+            this.isNotifSuccess = true;
+          }
+          else {
+            this.isNotifSuccess = false;
+          }
+          this.triggerNotif();
+        }
+    );
     this.contactForm.controls.name.setValue('');
     this.contactForm.controls.email.setValue('');
     this.contactForm.controls.message.setValue('');
@@ -53,4 +63,10 @@ export class ContactComponent implements OnInit {
     return true
   }
 
+  triggerNotif(){
+    this.isNotifActive = true;
+    setTimeout(()=>{
+      this.isNotifActive=false;
+    },300)
+  }
 }

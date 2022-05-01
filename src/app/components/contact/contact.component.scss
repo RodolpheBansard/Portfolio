@@ -106,4 +106,30 @@ $white: #FFFFFF;
 
 }
 
+.notif{
+  position: fixed;
+  left: 50%;
+  bottom: -5rem;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  transition: 0.5s;
+  border-radius: .5rem;
+}
+
+.notif.active{
+  bottom: 0;
+
+}
+.notif-success{
+  border: 3px solid #8CFB90;
+  background: $dark;
+  color: #8CFB90;
+}
+
+.notif-error{
+  border: 3px solid #FF6B6B;
+  background: $dark;
+  color: #FF6B6B;
+}
 
