@@ -49,7 +49,8 @@
     "ABOUT": "A Propos de moi",
     "SKILLS": "Prestations",
     "INTERESTED": "Vous êtes intéressés pour travailler avec moi?",
-    "RESUME": "Mon CV"
+    "RESUME": "Mon CV",
+    "FEATURED": "Travaux récents"
   },
   "SKILLS": {
     "FRONT": {

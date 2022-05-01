@@ -28,8 +28,9 @@ export class WorkCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.work.previewPath)
-    this.previewImageUrl$ = this.storage.ref('works/'+ this.work.title +'/1.png').getDownloadURL();
+    if(this.work){
+      this.previewImageUrl$ = this.storage.ref('works/'+ this.work.title +'/1.png').getDownloadURL();
+    }
   }
 
 

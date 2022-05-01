@@ -49,7 +49,8 @@
     "ABOUT": "About me",
     "SKILLS": "What I Do",
     "INTERESTED": "Interested in working with me?",
-    "RESUME": "My Resume"
+    "RESUME": "My Resume",
+    "FEATURED": "Featured Work"
   },
   "SKILLS": {
     "FRONT": {

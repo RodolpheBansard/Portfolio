@@ -1,4 +1,4 @@
-<div [ngClass]="{'reverse' : index%2==0}"  aTilt [tiltSettings]="tiltSetting" class="work-card">
+<div *ngIf="work" [ngClass]="{'reverse' : index%2==0}"  aTilt [tiltSettings]="tiltSetting" class="work-card">
   <div [style.background-image]="'url(' + (previewImageUrl$|async) + ')'" class="work-image"></div>
   <div class="work-infos">
     <div class="work-title">

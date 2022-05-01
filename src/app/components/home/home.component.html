@@ -13,14 +13,13 @@
 
 <app-what-i-do></app-what-i-do>
 
-<!--<div class=" container work-content ">-->
-<!--  <h3 class="white-glow-normal section-title">Latest Work</h3>-->
-<!--  <div class="work-cards">-->
-<!--    <app-work-card></app-work-card>-->
-<!--    <app-work-card></app-work-card>-->
-<!--    <app-work-card></app-work-card>-->
-<!--  </div>-->
-<!--</div>-->
+<div class=" container work-content ">
+  <h3 class="white-glow-normal section-title">{{"SECTION_TITLE.FEATURED" | translate}}</h3>
+  <div class="work-cards">
+    <app-work-card *ngFor="let work of featuredWork$|async;let index=index" [work]="work" [index]="index"></app-work-card>
+  </div>
+</div>
 
+<app-work-details-modal *ngIf="selectedWork != null" [work]="selectedWork"></app-work-details-modal>
 
 <app-footer></app-footer>

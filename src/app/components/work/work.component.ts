@@ -10,6 +10,7 @@ export interface Work{
   previewPath:string,
   tags: string[];
   illustrationsPath: string[];
+  isFeatured: boolean;
 }
 
 export interface WorkTag{
@@ -36,7 +37,6 @@ export class WorkComponent implements OnInit {
               private formBuilder: FormBuilder,
               private workModalService: WorkModalService) {
     this.workModalService.selectedWork.subscribe((value) => {
-      console.log(value);
       this.selectedWork = value;
     })
 
