@@ -5,13 +5,11 @@ $grey500: #C7C5D8;
 $white: #FFFFFF;
 
 .container{
-  position: absolute;
+  margin: 10rem auto;
   top: 0;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
   z-index: -1;
 }
 

@@ -5,6 +5,7 @@ $grey500: #C7C5D8;
 $white: #FFFFFF;
 
 .language-picker{
+  z-index: 20;
   position: relative;
   display: flex;
   flex-direction: column;

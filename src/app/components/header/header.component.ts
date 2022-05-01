@@ -33,7 +33,10 @@ export class HeaderComponent implements OnInit {
   }
   navigate(url: string){
     this.isOverlayActive=false;
-    this.routeService.transition(url);
+    if(!this.router.url.includes(url)){
+      this.routeService.transition(url);
+    }
+
   }
 
   scrollTo(element : string){
