@@ -2,7 +2,7 @@
   <div [style.background-image]="'url(' + (previewImageUrl$|async) + ')'" class="work-image"></div>
   <div class="work-infos">
     <div class="work-title">
-      <h2 class="white-glow-small">{{("WORK." + work.title + ".TITLE")|translate}}</h2>
+      <h2 class="white-glow-small">{{("WORK." + work.title + ".LABEL")|translate}}</h2>
       <span *ngFor="let tag of work.tags" class="white-glow-small">{{tag}}</span>
     </div>
     <button (click)="onClickWork(work)" class="primary-button">View Project</button>

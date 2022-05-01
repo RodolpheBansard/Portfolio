@@ -1,5 +1,6 @@
 {
   "WORK_EXPERIENCE": {
+    "LABEL": "Expériences",
     "SODIUS": {
       "DATE": "Depuis 2022",
       "COMPANY": "Sodius-Willert",
@@ -23,6 +24,7 @@
     }
   },
   "EDUCATION": {
+    "LABEL": "Formation",
     "ENSIM1": {
       "DATE": "2020",
       "SCHOOL": "ENSIM",
@@ -36,20 +38,6 @@
       "TITLE": "Classe préparatoire intégrée",
       "LOCATION": "Le Mans",
       "DESCRIPTION": "Obtention d’un DEUG de physique"
-    }
-  },
-  "WORK": {
-    "LUMIPLAY": {
-      "TITLE": "Lumiplay",
-      "DESCRIPTION": ""
-    },
-    "SECOLLAB": {
-      "TITLE": "SECOLLAB",
-      "DESCRIPTION": ""
-    },
-    "PERSONAL_PORTFOLIO": {
-      "TITLE": "Portfolio",
-      "DESCRIPTION": ""
     }
   },
   "NAV": {
@@ -83,6 +71,7 @@
   },
   "CONTACT": {
     "TITLE": "Parlons de votre",
+    "YOUR": "",
     "TITLE_HIGHLIGHT": "Projet!",
     "SUBMIT": "Envoyer le message",
     "LABEL": {
@@ -95,5 +84,27 @@
       "EMAIL": "Email...",
       "MESSAGE": "Message..."
     }
+  },
+  "WORK_CARD": {
+    "VIEW_PROJECT": "View Project",
+    "VIEW_SITE": "View Site"
+  },
+  "WORK": {
+    "LUMIPLAY": {
+      "LABEL": "Lumiplay",
+      "DESCRIPTION1": "Lumiplay est une solution SaaS permettant de crée, gérer et planifier des contenus. Ces contenus sont ensuite envoyé sur leur support d’affichage (application mobile, panneau d’information, transport en commun, ...)",
+      "DESCRIPTION2": "J’ai pu participer au développement de cette application pendant un an en utilisant Angular pour le frontend et Java (Springboot) pour le backend avec une base de données PostrgesSQL"
+    },
+    "PERSONAL_PORTFOLIO": {
+      "LABEL": "Portfolio",
+      "DESCRIPTION1": "Ce portfolio a été développé dans le but de présenter mes compétences de développeur Fullstack dans le cadre de mon activité de freelance.",
+      "DESCRIPTION2": "La maquette a été réalisé sur figma et l'intégration a été faite en angular. Firebase est utilisé pour le stockage des image et pour le déploiement"
+    },
+    "SECOLLAB": {
+      "LABEL": "Secollab",
+      "DESCRIPTION1": "Secollab est une platforme web de revue de données et de modeèle dans un environnement versionné.",
+      "DESCRIPTION2": "Je participe actuellement au developpement de cette platforme en utilisant Angular pour le frontend et Java pour le backend avec une base de données de type graphe(Neo4j)"
+    }
   }
 }
+

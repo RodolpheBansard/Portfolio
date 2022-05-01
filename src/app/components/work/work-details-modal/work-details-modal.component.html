@@ -1,9 +1,9 @@
 <div class="modal-container">
   <div class="modal">
-    <h1>Lumiplay</h1>
+    <h1>{{("WORK." + work.title + ".LABEL")|translate}}</h1>
     <div class="description">
-      <p>Lumiplay est une solution SaaS permettant de crée, gérer et planifier des contenus. Ces contenus sont ensuite envoyé sur leur support d’affichage (application mobile, panneau d’information, transport en commun, ...)</p>
-      <p>J’ai pu participer au développement de cette application pendant un an en utilisant Angular pour le frontend et Java (Springboot) pour le backend avec une base de données PostrgesSQL</p>
+      <p>{{("WORK." + work.title + ".DESCRIPTION1")|translate}}</p>
+      <p>{{("WORK." + work.title + ".DESCRIPTION2")|translate}}</p>
     </div>
     <div class="carousel">
       <div class="carousel-arrows">
@@ -12,12 +12,9 @@
       </div>
       <img class="carousel-image" [src]="imageUrl[counter]">
     </div>
-
     <div (click)="resetSelectedWork()" class="close-modal-icon">
       <img src="assets/images/cross.svg">
     </div>
-
   </div>
-
 </div>
 <div class="overlay"></div>

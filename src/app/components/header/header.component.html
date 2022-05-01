@@ -7,17 +7,17 @@
       <span></span>
     </div>
     <div class="header-actions">
-      <span (click)="navigate('about')" class="white-glow-small">About</span>
-      <span (click)="navigate('work')" class="white-glow-small">Work</span>
+      <span (click)="navigate('work')" class="white-glow-small">{{"NAV.WORK"|translate}}</span>
+      <span (click)="navigate('about')" class="white-glow-small">{{"NAV.ABOUT"|translate}}</span>
       <app-language-picker></app-language-picker>
-      <button (click)="navigate('contact')" class="primary-button">Let's Talk</button>
+      <button (click)="navigate('contact')" class="primary-button">{{"NAV.CONTACT"|translate}}</button>
     </div>
 
   </div>
 </div>
 <div [ngClass]="{'active' : isOverlayActive}" class="overlay-header">
-  <span (click)="navigateFromOverlay('about')">About</span>
-  <span (click)="navigateFromOverlay('work')">Work</span>
+  <span (click)="navigateFromOverlay('work')">{{"NAV.WORK"|translate}}</span>
+  <span (click)="navigateFromOverlay('about')">{{"NAV.ABOUT"|translate}}</span>
   <app-language-picker [isOverlay]="true"></app-language-picker>
-  <button (click)="navigateFromOverlay('contact')" class="primary-button">Let's Talk</button>
+  <button (click)="navigateFromOverlay('contact')" class="primary-button">{{"NAV.CONTACT"|translate}}</button>
 </div>

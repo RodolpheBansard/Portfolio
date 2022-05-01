@@ -1,5 +1,6 @@
 {
   "WORK_EXPERIENCE": {
+    "LABEL": "Work Experience",
     "SODIUS": {
       "DATE": "Since 2022",
       "COMPANY": "Sodius-Willert",
@@ -23,6 +24,7 @@
     }
   },
   "EDUCATION": {
+    "LABEL": "Education",
     "ENSIM1": {
       "DATE": "2020",
       "SCHOOL": "ENSIM",
@@ -36,20 +38,6 @@
       "TITLE": "preparatory class",
       "LOCATION": "Le Mans",
       "DESCRIPTION": "Physics degree"
-    }
-  },
-  "WORK": {
-    "LUMIPLAY": {
-      "TITLE": "Lumiplay",
-      "DESCRIPTION": ""
-    },
-    "SECOLLAB": {
-      "TITLE": "SECOLLAB",
-      "DESCRIPTION": ""
-    },
-    "PERSONAL_PORTFOLIO": {
-      "TITLE": "Portfolio",
-      "DESCRIPTION": ""
     }
   },
   "NAV": {
@@ -82,8 +70,9 @@
     "DESCRIPTION2": "My goal is to create engaging applications with high standards on user-experience and user interface."
   },
   "CONTACT": {
-    "TITLE": "Hi, let's talk about your",
-    "TITLE_HIGHLIGHT": "Project!",
+    "TITLE": "Hi, let's talk about",
+    "YOUR": "your",
+    "TITLE_HIGHLIGHT": " Project!",
     "SUBMIT": "Send Message",
     "LABEL": {
       "NAME": "Name",
@@ -91,10 +80,30 @@
       "MESSAGE": "Message"
     },
     "PLACEHOLDER": {
-      "NAME": "What's Your Name",
-      "EMAIL": "What's Your Email",
+      "NAME": "What's Your Name?",
+      "EMAIL": "What's Your Email?",
       "MESSAGE": "Write Your Message"
     }
+  },
+  "WORK_CARD": {
+    "VIEW_PROJECT": "View Project",
+    "VIEW_SITE": "View Site"
+  },
+  "WORK": {
+    "LUMIPLAY": {
+      "LABEL": "Lumiplay",
+      "DESCRIPTION1": "Lumiplay is a SaaS solution for creating, managing and scheduling content. These contents are then sent to devices to be brodcast (mobile application, information panel, public transport, etc).",
+      "DESCRIPTION2": "I participated in the development of this application for a year using Angular for the frontend and Java (Springboot) for the backend with a PostrgesSQL database."
+    },
+    "PERSONAL_PORTFOLIO": {
+      "LABEL": "Portfolio",
+      "DESCRIPTION1": "This portfolio was developed in order to present my skills as a Fullstack developer as part of my freelance activity.",
+      "DESCRIPTION2": "The mockup was made on figma and the integration was done in angular. Firebase is used for image storage and deployment"
+    },
+    "SECOLLAB": {
+      "LABEL": "Secollab",
+      "DESCRIPTION1": "Secollab is a web-based data and model review platform in a versioned environment.",
+      "DESCRIPTION2": "I am currently involved in the development of this platform using Angular for the frontend and Java for the backend with a graph database(Neo4j)"
+    }
   }
-
 }

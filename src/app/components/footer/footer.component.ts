@@ -14,4 +14,8 @@ export class FooterComponent {
     this.routeService.goToContact();
   }
 
+  goTo(url:string){
+    window.open(url);
+  }
+
 }

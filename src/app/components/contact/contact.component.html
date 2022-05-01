@@ -1,24 +1,24 @@
 <div class="container">
   <div class="contact-container">
     <h2 class="white-glow-small">
-      Hi, let's talk about <br> your <span>Project!</span>
+      {{"CONTACT.TITLE"|translate}}<br>{{"CONTACT.YOUR"|translate}}<span>{{"CONTACT.TITLE_HIGHLIGHT"|translate}}</span>
     </h2>
     <form [formGroup]="contactForm">
       <div [ngClass]="{'invalid' : !contactForm.get('name')?.valid && !isEmpty(contactForm.controls.name)}" class="form-group">
-        <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.name) ? 'visible' : 'hidden'}" >Name</label>
-        <input formControlName="name" placeholder="What's Your Name?">
+        <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.name) ? 'visible' : 'hidden'}" >{{'CONTACT.LABEL.NAME'|translate}}</label>
+        <input formControlName="name" placeholder="{{'CONTACT.PLACEHOLDER.NAME'|translate}}">
       </div>
       <div [ngClass]="{'invalid' : !contactForm.get('email')?.valid && !isEmpty(contactForm.controls.email)}" class="form-group">
-        <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.email) ? 'visible' : 'hidden'}">Email</label>
-        <input formControlName="email" placeholder="What's Your Email?">
+        <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.email) ? 'visible' : 'hidden'}">{{'CONTACT.LABEL.EMAIL'|translate}}</label>
+        <input formControlName="email" placeholder="{{'CONTACT.PLACEHOLDER.EMAIL'|translate}}">
       </div>
       <div [ngClass]="{'invalid' : !contactForm.get('message')?.valid && !isEmpty(contactForm.controls.message)}" class="form-group">
-        <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.message) ? 'visible' : 'hidden'}">Message</label>
-        <input type="email" formControlName="message" placeholder="Write your message">
+        <label [ngStyle]="{'visibility': !isEmpty(contactForm.controls.message) ? 'visible' : 'hidden'}">{{'CONTACT.LABEL.MESSAGE'|translate}}</label>
+        <input type="email" formControlName="message" placeholder="{{'CONTACT.PLACEHOLDER.MESSAGE'|translate}}">
       </div>
 
       <button [ngClass]="{'disable' : contactForm.invalid}" [disabled]="contactForm.invalid" (click)="submitContactForm()" class="primary-button">
-        <span>Send Message</span>
+        <span>{{"CONTACT.SUBMIT"|translate}}</span>
         <img src="assets/images/right-arrow.svg">
       </button>
     </form>

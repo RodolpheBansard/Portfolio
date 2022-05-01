@@ -12,7 +12,7 @@ import {WorkModalService} from "../../../services/work-modal.service";
 export class WorkDetailsModalComponent implements AfterViewInit {
 
   @Input()
-  work!: Work|null;
+  work!: Work;
 
 
   counter = 1;
@@ -25,7 +25,6 @@ export class WorkDetailsModalComponent implements AfterViewInit {
   }
 
   nextImage(){
-    // @ts-ignore
     if(this.counter >= this.work.tags.length-1){
       this.counter = 0;
     }
@@ -48,9 +47,7 @@ export class WorkDetailsModalComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.work) {
-      // @ts-ignore
       this.work.illustrationsPath.forEach((image, index) => {
-        // @ts-ignore
         this.storage.ref('works/' + this.work.title + '/' + image + '.png').getDownloadURL().subscribe(
           (url) => {
             this.imageUrl[index] = url;
