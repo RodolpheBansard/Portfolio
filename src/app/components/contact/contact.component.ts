@@ -67,6 +67,6 @@ export class ContactComponent implements OnInit {
     this.isNotifActive = true;
     setTimeout(()=>{
       this.isNotifActive=false;
-    },300)
+    },3000)
   }
 }
