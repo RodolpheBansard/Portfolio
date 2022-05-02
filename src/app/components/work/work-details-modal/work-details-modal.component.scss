@@ -160,4 +160,12 @@ button.disable{
       display: block;
     }
   }
+  .modal{
+    padding: 5rem!important;
+  }
+}
+@media screen and(min-width: 800px) {
+  .modal{
+    padding: 5rem!important;
+  }
 }
