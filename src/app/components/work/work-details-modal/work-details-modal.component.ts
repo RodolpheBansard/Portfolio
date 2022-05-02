@@ -61,4 +61,11 @@ export class WorkDetailsModalComponent implements AfterViewInit {
     this.workModalService.resetSelectedWork();
   }
 
+  goTo(url:string|undefined){
+    if(url){
+      window.open(url)
+    }
+
+  }
+
 }

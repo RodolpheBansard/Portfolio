@@ -13,7 +13,17 @@
       <img class="carousel-image" [src]="imageUrl[counter]">
     </div>
     <div (click)="resetSelectedWork()" class="close-modal-icon">
-      <img src="assets/images/cross.svg">
+      <img class="icon" src="assets/images/cross.svg">
+    </div>
+    <div class="button-container">
+      <button [ngClass]="{'disable' : work.siteUrl === undefined}" (click)="goTo(work.siteUrl)" class="primary-button">
+        <span>View Site</span>
+        <img src="assets/images/github.svg">
+      </button>
+      <button [ngClass]="{'disable' : work.siteUrl === undefined}" (click)="goTo(work.codeUrl)" class="primary-button">
+        <span>View Code</span>
+        <img src="assets/images/dribbble.svg">
+      </button>
     </div>
   </div>
 </div>

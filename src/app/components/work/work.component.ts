@@ -11,6 +11,8 @@ export interface Work{
   tags: string[];
   illustrationsPath: string[];
   isFeatured: boolean;
+  siteUrl?:string;
+  codeUrl?:string;
 }
 
 export interface WorkTag{
