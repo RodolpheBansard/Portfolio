@@ -24,6 +24,7 @@ import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import { WorkCardComponent } from './components/work/work-card/work-card.component';
 import { WorkDetailsModalComponent } from './components/work/work-details-modal/work-details-modal.component';
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {CookieService} from "ngx-cookie-service";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -64,7 +65,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

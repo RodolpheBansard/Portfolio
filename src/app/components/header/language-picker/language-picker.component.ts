@@ -1,5 +1,6 @@
 import {Component, ElementRef, HostListener, Input, OnInit} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import {CookieService} from "ngx-cookie-service";
 
 export interface Language{
   name:string;
@@ -41,9 +42,18 @@ export class LanguagePickerComponent implements OnInit {
   selectedLanguage: Language = this.languages[0];
 
   constructor(private eRef: ElementRef,
-              private translateService: TranslateService) { }
+              private translateService: TranslateService,
+              private cookieService: CookieService) { }
 
   ngOnInit(): void {
+    if(this.cookieService.get('language')){
+      const savedLanguageIdentifier : string = this.cookieService.get('language');
+      this.languages.forEach((language)=> {
+        if(language.identifier === savedLanguageIdentifier){
+          this.selectLanguage(language);
+        }
+      })
+    }
   }
 
   toggleLanguagePicker(){
@@ -54,5 +64,6 @@ export class LanguagePickerComponent implements OnInit {
     this.selectedLanguage = language;
     this.translateService.use(language.identifier)
     this.isLanguagePickerActive = false;
+    this.cookieService.set('language',language.identifier);
   }
 }

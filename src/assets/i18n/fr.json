@@ -103,7 +103,7 @@
     },
     "SECOLLAB": {
       "LABEL": "Secollab",
-      "DESCRIPTION1": "Secollab est une platforme web de revue de données et de modèle dans un environnement versionné.",
+      "DESCRIPTION1": "Secollab est une platforme web de revue de données et de modèles dans un environnement versionné.",
       "DESCRIPTION2": "Je participe actuellement au developpement de cette platforme en utilisant Angular pour le frontend et Java pour le backend avec une base de données de type graphe(Neo4j)"
     }
   }
