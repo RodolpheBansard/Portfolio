@@ -17,6 +17,10 @@ $white: #FFFFFF;
   .logo{
     z-index: 10;
     cursor: pointer;
+    transition: 0.3s;
+  }
+  .logo:hover{
+    transform: scale(1.2);
   }
 
   .header-actions{
@@ -27,6 +31,10 @@ $white: #FFFFFF;
 
     span{
       z-index: 10;
+      transition: 0.1s;
+    }
+    span:hover{
+      transform: scale(1.2);
     }
   }
   @media screen and(min-width: 850px) {
@@ -124,3 +132,4 @@ span,img{
     opacity: 0;
   }
 }
+
