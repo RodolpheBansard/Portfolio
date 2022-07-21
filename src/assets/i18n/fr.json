@@ -105,6 +105,11 @@
       "LABEL": "Secollab",
       "DESCRIPTION1": "Secollab est une platforme web de revue de données et de modèles dans un environnement versionné.",
       "DESCRIPTION2": "Je participe actuellement au developpement de cette platforme en utilisant Angular pour le frontend et Java pour le backend avec une base de données de type graphe(Neo4j)"
+    },
+    "BOULDERER": {
+      "LABEL": "Boulderer",
+      "DESCRIPTION1": "Boulderer est une platforme Ecommerce de matériels d'escalades. C'est une étude de cas pour perfectionner mes connaissances.",
+      "DESCRIPTION2": "La maquette a été réalisée sur figma et l'intégration en Angular/Java. Okta est utilisé pour l'authentification et  Stripe pour le paiement."
     }
   }
 }

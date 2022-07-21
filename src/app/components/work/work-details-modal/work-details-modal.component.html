@@ -7,8 +7,8 @@
     </div>
     <div class="carousel">
       <div class="carousel-arrows">
-        <div (click)="nextImage()"><img class="carousel-arrow left" src="assets/images/right-arrow.svg"></div>
-        <div (click)="previousImage()"><img class="carousel-arrow" src="assets/images/right-arrow.svg"></div>
+        <div (click)="previousImage()"><img class="carousel-arrow left" src="assets/images/right-arrow.svg"></div>
+        <div (click)="nextImage()"><img class="carousel-arrow" src="assets/images/right-arrow.svg"></div>
       </div>
       <img class="carousel-image" [src]="imageUrl[counter]">
     </div>

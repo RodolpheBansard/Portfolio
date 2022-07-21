@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import {AngularFireStorage} from "@angular/fire/compat/storage";
-import {Observable} from "rxjs";
+import {Observable, of} from "rxjs";
 import {Work} from "../work.component";
 import {WorkModalService} from "../../../services/work-modal.service";
 
@@ -15,7 +15,7 @@ export class WorkDetailsModalComponent implements AfterViewInit {
   work!: Work;
 
 
-  counter = 1;
+  counter = 0;
 
   imageUrl: string[]= [];
 
@@ -25,20 +25,32 @@ export class WorkDetailsModalComponent implements AfterViewInit {
   }
 
   nextImage(){
-    if(this.counter >= this.work.tags.length-1){
-      this.counter = 0;
+    this.counter++;
+    if(this.work.title === 'PERSONAL_PORTFOLIO'){
+      if(this.counter === this.work.tags.length){
+        this.counter = 0;
+      }
     }
     else{
-      this.counter++;
+      if(this.counter === this.work.tags.length+1){
+        this.counter = 0;
+      }
     }
+
   }
   previousImage(){
-    if(this.counter <= 0){
-      // @ts-ignore
-      this.counter = this.work.tags.length-1;
+    this.counter--;
+    if(this.work.title === 'PERSONAL_PORTFOLIO'){
+      if(this.counter === -1){
+        // @ts-ignore
+        this.counter = this.work.tags.length-1;
+      }
     }
     else{
-      this.counter--;
+      if(this.counter === -1){
+        // @ts-ignore
+        this.counter = this.work.tags.length;
+      }
     }
   }
 
